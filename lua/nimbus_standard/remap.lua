@@ -9,10 +9,10 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("i", "<C-o>", "<Esc>")
 
-vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all instances of selected" })
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make file executable", silent = true })
 
 vim.keymap.set("n", "<leader>cr", [[:%s/\r//g<CR>]], { desc = "Remove carriage returns (^M)" })
 
 vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so")
-end)
+end, { desc = "Source" })
