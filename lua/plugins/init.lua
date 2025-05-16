@@ -1,4 +1,5 @@
 print("loading lazy plugins...")
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -12,6 +13,7 @@ return {
     "catppuccin/nvim", 
     name = "catppuccin", 
     priority = 1000,
+    lazy = false,
     config = function()
         require("plugins.catppuccin")
         vim.cmd.colorscheme("catppuccin")
@@ -28,4 +30,25 @@ return {
   {
     "ThePrimeagen/vim-be-good"
   },
-}
+  {
+    "m4xshen/autoclose.nvim",
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = {
+    		"nvim-tree/nvim-web-devicons",
+  	},	
+    config = function()
+        require("plugins.lualine")
+    end,
+  },
+  {
+    "romgrk/barbar.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("plugins.barbar")
+    end,
+  }
+}   

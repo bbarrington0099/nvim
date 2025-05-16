@@ -1,3 +1,7 @@
+print("setting nvim options...")
+
+vim.g.mapleader = " "
+
 vim.g.loaded_netrm = 1
 vim.g.loaded_netrmPlugin = 1
 
@@ -24,6 +28,4 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.colorcolumn = "80"
 
-vim.g.mapleader = " "
-
-vim.opt.fileformats = { "unix", "dos" }
+vim.opt.updatetime = 50

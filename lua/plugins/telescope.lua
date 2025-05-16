@@ -1,4 +1,4 @@
-print("setting telescope keys...")
+print("loading telescope keys...")
 
 local builtin = require('telescope.builtin')
 
@@ -12,6 +12,5 @@ vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Telescope git fil
 vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'Telescope git status' })
 vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = 'Telescope git branches' })
 
-print("    Type <Space>hp for a list of configured keymaps")
 vim.keymap.set('n', '<leader>hp', builtin.keymaps, { desc = 'Telescope list keymaps' })
 return {}

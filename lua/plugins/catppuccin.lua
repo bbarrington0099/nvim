@@ -1,8 +1,8 @@
 print("loading catppuccin...")
 
-local builtin = require("catppuccin")
+local catppuccin = require("catppuccin")
 
-builtin.setup({
+catppuccin.setup({
     flavour = "macchiato",
     integrations = {
         treesitter = true,
@@ -10,7 +10,7 @@ builtin.setup({
         telescope = {
             enabled = true,
         },
+        barbar = true,
     },
 })
-
 return{}    
