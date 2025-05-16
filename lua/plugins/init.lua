@@ -15,13 +15,11 @@ return {
     priority = 1000,
     lazy = false,
     config = function()
-        require("plugins.catppuccin")
         vim.cmd.colorscheme("catppuccin")
     end,
   },
   {
   	"nvim-tree/nvim-tree.lua",
-	version = "*",
   	lazy = false,
   	dependencies = {
     		"nvim-tree/nvim-web-devicons",
@@ -38,17 +36,39 @@ return {
     dependencies = {
     		"nvim-tree/nvim-web-devicons",
   	},	
-    config = function()
-        require("plugins.lualine")
-    end,
   },
   {
     "romgrk/barbar.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-      require("plugins.barbar")
-    end,
-  }
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "rafamadriz/friendly-snippets",
+    },
+  },
+  {
+      "mason-org/mason.nvim",
+      version = "^1.0.0",
+  },
+  {
+      "mason-org/mason-lspconfig.nvim",
+      version = "^1.0.0",
+  },
+  {
+      "neovim/nvim-lspconfig",
+      version = "0.1.7",
+      event = {"BufReadPre", "BufNewFile"},
+      dependencies = {
+          "hrsh7th/cmp-nvim-lsp",
+          { "antosha417/nvim-lsp-file-operations", config = true },
+      }
+  },
 }   
