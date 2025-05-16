@@ -15,15 +15,6 @@ cmp.setup({
             luasnip.lsp_expand(args.body)
         end,
     },
-    mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
-        ["<C-j>"] = cmp.mapping.select_next_item(),
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-e>"] = cmp.mapping.close(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
-    }),
     sources = {
         { name = "nvim_lsp" },
         { name = "luasnip" },
@@ -31,4 +22,13 @@ cmp.setup({
         { name = "path" },
     },
 })
+
+vim.keymap.set("i", "<C-k>", cmp.mapping.select_prev_item(), { desc = "Completion Select Previous" })
+vim.keymap.set("i", "<C-j>", cmp.mapping.select_next_item(), { desc = "Completion Select Next" })
+vim.keymap.set("i", "<C-b>", cmp.mapping.scroll_docs(-4), { desc = "Completion Scroll Docs Up" })
+vim.keymap.set("i", "<C-f>", cmp.mapping.scroll_docs(4), { desc = "Completion Scroll Docs Down" })
+vim.keymap.set("i", "<C-Space>", cmp.mapping.complete(), { desc = "Completion Complete" })
+vim.keymap.set("i", "<C-e>", cmp.mapping.close(), { desc = "Completion Close" })
+vim.keymap.set("i", "<CR>", cmp.mapping.confirm({ select = true }), { desc = "Completion Confirm" })
+
 return{}
