@@ -29,6 +29,6 @@ vim.keymap.set("i", "<C-b>", cmp.mapping.scroll_docs(-4), { desc = "Completion S
 vim.keymap.set("i", "<C-f>", cmp.mapping.scroll_docs(4), { desc = "Completion Scroll Docs Down" })
 vim.keymap.set("i", "<C-Space>", cmp.mapping.complete(), { desc = "Completion Complete" })
 vim.keymap.set("i", "<C-e>", cmp.mapping.close(), { desc = "Completion Close" })
-vim.keymap.set("i", "<CR>", cmp.mapping.confirm({ select = true }), { desc = "Completion Confirm" })
+vim.keymap.set("i", "<C-CR>", cmp.mapping.confirm({ select = true }), { desc = "Completion Confirm" })
 
 return{}
