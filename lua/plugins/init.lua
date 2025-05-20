@@ -3,6 +3,7 @@ print("loading lazy plugins...")
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    tag = "v0.9.2",
     build = ":TSUpdate",
   },
   {
@@ -71,4 +72,9 @@ return {
           { "antosha417/nvim-lsp-file-operations", config = true },
       }
   },
+  --[[ {
+      "zbirenbaum/copilot.lua",
+      cmd = "Copilot",
+      event = "InsertEnter",
+  } ]]
 }   
