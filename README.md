@@ -8,3 +8,7 @@ This is my personal Neovim configuration.
     ```
         sudo apt install ripgrep
     ```
+- c compiler (for treesitter)
+    ```
+        sudo apt install build-essential
+    ```
